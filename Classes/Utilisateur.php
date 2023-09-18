@@ -18,10 +18,10 @@ abstract class Utilisateur {
 
     // Constructeur (méthode magique __construct)
     public function __construct(
-        $nom,
-        $email,
-        $identifiant,
-        $dateInscription
+        ?string $nom,
+        ?string $email,
+        ?string $identifiant,
+        ?datetime $dateInscription
     ) {
         $this->nom = $nom;
         $this->email = $email;
@@ -58,8 +58,6 @@ abstract class Utilisateur {
     public function setIdentifiant(?string $identifiant) {
         $this->identifiant = $identifiant;
     }
-    public function setDateInscription(?datetime $dateInscription) {
-        $this->dateInscription = $dateInscription;
-    }
+
 
 }
